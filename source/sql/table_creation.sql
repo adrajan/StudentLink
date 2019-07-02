@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS Concentration (
 
 CREATE TABLE IF NOT EXISTS Profile (
 	profile_id SERIAL PRIMARY KEY,
+	admin BOOLEAN DEFAULT FALSE,
 	first_name VARCHAR(64) NOT NULL,
 	middle_name VARCHAR(64) NULL,
 	last_name VARCHAR(64) NOT NULL,
