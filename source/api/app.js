@@ -2,8 +2,17 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
+
+app.set('views', __dirname + "/../views")
+app.use('/',express.static(__dirname + '/../public'));
+app.use('/',express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/',express.static(__dirname + '/node_modules/jquery/dist'));
+
+
+app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
-    res.send('Welcome to Student link!')
+    res.render('login')
 })
 
 app.get('/getClasses', (req, res) => {
