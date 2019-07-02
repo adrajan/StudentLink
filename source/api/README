@@ -1,1 +1,4 @@
+API needs express and body-parser
 
+npm install express --save
+npm install body-parser
